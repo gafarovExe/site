@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой сайт - Группы</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+ <!-- Навигационное меню -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">StudStat</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="students.html">Студенты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="teachers.html">Преподаватели</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="groups.html">Группы</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container mt-5">
+    <h1>Группы</h1>
+    <hr>
+
+    <!-- Группа 1 -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Группа А1</h5>
+        <p class="card-text">Численность: 30 студентов</p>
+        <p class="card-text">Специализация: Программирование</p>
+        <p class="card-text">
+          Куратор: <a href="teachers.html#ivanovII" class="curator-link">Иванов Иван Иванович</a>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Группа 2 -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Группа Б2</h5>
+        <p class="card-text">Численность: 25 студентов</p>
+        <p class="card-text">Специализация: Маркетинг</p>
+        <p class="card-text">
+          Куратор: <a href="teachers.html#petrovPP" class="curator-link">Петров Петр Петрович</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Группа 3 -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Группа В3</h5>
+        <p class="card-text">Численность: 28 студентов</p>
+        <p class="card-text">Специализация: Лингвистика</p>
+        <p class="card-text">
+          Куратор: <a href="teachers.html#smirnovaOP" class="curator-link">Смирнова Ольга Павловна</a>
+        </p>
+      </div>
+    </div>
+    <div id="output"></div>
+  </div>
+
+  <!-- Подвал -->
+  <footer class="footer mt-5 py-3 bg-light text-center">
+    <div class="container">
+      <span class="text-muted">Все права защищены &copy; 2024</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const curatorLinks = document.querySelectorAll(".curator-link");
+    for (let i = 0; i < curatorLinks.length; i++) {
+        curatorLinks[i].addEventListener("click", handlerClick);
+    }
+    
+    function handlerClick(event) {
+        let href = event.target.getAttribute("href");
+        const teacherId = href.split("#")[1];
+        localStorage.setItem("teacherId", teacherId)
+        document.location.href = href
+
+    }
+</script>
+</body>
+</html>
+

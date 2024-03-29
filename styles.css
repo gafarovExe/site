@@ -1,0 +1,56 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; 
+  color: #333; 
+  padding-top: 45px; 
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #333; 
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #007bff; 
+  color: #fff;
+  width: 100%; 
+}
+
+.card-title {
+  color: #007bff;
+}
+
+.card-text {
+  color: #666; 
+}
+
+
+.schedule-button {
+  margin-top: 1rem; 
+}
+
+.card-img-top {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 0.25rem; 
+  border: 1px solid #dee2e6; 
+  margin-bottom: 1rem; 
+  max-width: 200px; 
+  max-height: 200px; 
+}
+
+.highlight {
+  box-shadow: 0 0 10px #8bc34a; 
+}
+
